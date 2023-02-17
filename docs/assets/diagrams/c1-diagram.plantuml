@@ -1,0 +1,29 @@
+@startuml
+!define COLOR_A_1 #fee0b6
+!define COLOR_B_1 #d8daeb
+!define COLOR_B_4 #542788
+!define COLOR_REL_LINE #8073ac
+!define COLOR_REL_TEXT #8073ac
+
+!include https://raw.githubusercontent.com/plantuml-stdlib/C4-PlantUML/master/C4_Context.puml
+!include https://raw.githubusercontent.com/plantuml-stdlib/C4-PlantUML/master/C4_Container.puml
+
+Person_Ext(user, "User", "interacts with the assistant system")
+
+System_Ext(external,"External Applications", "e-mail, calendar, phone apps, search engine, ")
+
+Enterprise_Boundary(mainSystem,"Sadgamaya") {
+    System(assistantSystem, "Assistant System", "responsible for integrating applications, database and the AI agent, responds to user queries")
+    SystemDb(storage,"Storage","stores relevant data - user requests")
+    System_Ext(artificialIntelligence,"AI Agent","interfaces human language and programmatic language",$sprite = "robot" )
+}
+
+Rel_D(user, assistantSystem, "Queries", "Voice/Text")
+Rel_U(assistantSystem,user , "Responds", "Voice/Text/Image")
+Rel_R(assistantSystem,artificialIntelligence,"User query &\n App Data")
+Rel_L(artificialIntelligence,assistantSystem,"Response")
+BiRel_U(external,assistantSystem,"Request/Response")
+BiRel_L(assistantSystem,storage,"Read/Write")
+
+SHOW_LEGEND(false)
+@enduml
