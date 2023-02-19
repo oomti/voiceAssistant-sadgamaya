@@ -1,0 +1,46 @@
+@startuml
+
+!define DEV_BLUE #4FB1E2
+!define TEST_ORANGE #FFA500
+!define CANARY_YELLOW #FFEE00
+!define PROD_GREEN #8BC34A
+!define DEFAULT_WHITE #FFFFFF
+
+!define DEV_WIDTH 200
+!define TEST_WIDTH 250
+!define CANARY_WIDTH 200
+!define PROD_WIDTH 200
+
+card development as "development Stage" DEV_BLUE{
+    component virtualEnv as "deploy virtual Env"
+    component unitTest 
+    virtualEnv -> unitTest
+}   
+
+card testing as "testing Stage" TEST_ORANGE{
+    component buildTest as "build"
+    component integrationTest
+    component deployTest as "deploy Kubernetes"
+    buildTest -> deployTest
+    deployTest -> integrationTest
+}
+card canary CANARY_YELLOW  {
+    component buildCanary as "build"
+    component deployCanary as "deploy"
+    buildCanary -> deployCanary
+}
+card production PROD_GREEN {
+    component buildProduction as "build"
+    component deployProduction as "deploy"
+    buildProduction -> deployProduction
+}
+
+
+development ..> testing 
+testing ..> canary 
+canary ..> production 
+
+
+
+
+@enduml
