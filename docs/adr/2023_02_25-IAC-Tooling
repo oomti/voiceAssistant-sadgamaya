@@ -1,0 +1,31 @@
+# Decide tooling on managing diagrams
+ - __status:__       Decided
+ - __Last updated:__ 25/02/2023
+ - __Objective:__    
+
+## Context and problem statement
+---
+Need an automation solution that performs IAC while enables checking external conditions such as git branches and user status
+
+
+
+---
+## Priorities & Constraints
+- Provides IAC
+- Supports scripting and conditions/loops
+- Support GCP
+---
+## Considered Options
+ 1. Terraform
+ 2. Puppet
+ 3. Ansible
+ 4. Pulumi
+ 5. Jenkins
+
+---
+## Decision
+---
+Pulumi meets all requirements
+
+## Expected consequences
+The infrastructure will be managed with Pulumi, language to manage Infrastructure will be YAML/Javascript or Python.
