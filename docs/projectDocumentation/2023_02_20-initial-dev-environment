@@ -1,0 +1,33 @@
+## Create a Dev environment
+
+Specifications
+
+Following a [GitLab Flow](https://docs.gitlab.com/ee/topics/gitlab_flow.html) specifications for branching strategy
+
+Each branch will have it`s own infrastructure defined.
+
+The developer branch has no infrastructure on it`s own, feature branches get VM-s allocated to run and simulate developer code rapidly.
+
+- Create VM for developer branch
+- Once branch is updated push code to VM
+- Restart Node Server on VM
+
+
+Requirements:
+ - Store a VM startup script and configuration file
+ - store a cloudbuild yaml
+ - define access controls to VM
+ - configure cloud build to trigger on the git branch
+
+Steps:
+ - configure to start a VM for every branch tagged with developer 
+
+VM requirements
+- install yarn
+- install yarn packages 
+- start node
+- set up IAP and cloudnat
+- use a hardened default image(feature to be added later)
+
+Create a VM
+Enable IAP in IAM

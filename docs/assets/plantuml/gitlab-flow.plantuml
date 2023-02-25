@@ -1,0 +1,160 @@
+@startuml
+
+
+(D1) as d1   #Blue      
+(D2) as d2   #Blue
+(D3) as d3   #Blue
+(D4) as d4   #Blue
+(D5) as d5   #Blue
+(D6) as d6   #Blue
+(D7) as d7   #Blue
+(D8) as d8   #Blue
+(D9) as d9   #Blue
+(D10) as d10 #Blue
+(D11) as d11 #Blue
+(D12) as d12 #Blue
+(D13) as d13 #Blue
+(D14) as d14 #Blue
+(D15) as d15 #Blue
+
+
+( ) as t1 #White 
+( ) as t2 #White 
+( ) as t3 #White 
+(T3) as t4 #Orange
+( ) as t5 #White 
+(T5) as t6 #Orange
+( ) as t7 #White 
+(D7) as t8 #Orange
+( ) as t9 #White 
+( ) as t10 #White 
+(T10) as t11 #Orange
+( ) as t12 #White 
+( ) as t13 #White
+( ) as t14 #White
+( ) as t15 #White
+
+
+
+( ) as c1 #White 
+( ) as c2 #White
+( ) as c3 #White
+( ) as c4 #White
+(C3) as c5 #Yellow
+( ) as c6 #White
+( ) as c7 #White
+( ) as c8 #White
+(C7) as c9 #Yellow
+( ) as c10 #White
+( ) as c11 #White
+(C10) as c12 #Yellow
+( ) as c13 #White
+( ) as c14 #White
+( ) as c15 #White
+
+
+( ) as p1 #White
+( ) as p2 #White
+( ) as p3 #White
+( ) as p4 #White
+( ) as p5 #White
+(P3) as p6 #Green
+( ) as p7 #White
+( ) as p8 #White
+( ) as p9 #White
+( ) as p10 #White
+( ) as p11 #White
+( ) as p12 #White
+(P10) as p13 #Green
+( ) as p14 #White
+( ) as p15 #White
+
+
+
+d1 --> d2
+d2 --> d3
+d3 --> d4
+d4 --> d5
+d5 --> d6
+d6 --> d7
+d7 --> d8
+d8 --> d9
+d9 --> d10
+d10 -->d11
+d11 --> d12
+d12 --> d13
+d13 --> d14
+d14 --> d15
+
+
+t1 ..  t2
+t2 ..  t3
+t3 ..  t4
+t4 ..  t5
+t5 ..  t6
+t6 ..  t7
+t7 ..  t8
+t8 ..  t9
+t9 ..  t10
+t10 .. t11
+t11 .. t12
+t12 .. t13
+t13 .. t14
+t14 .. t15
+
+
+c1 ..  c2
+c2 ..  c3
+c3 ..  c4
+c4 ..  c5
+c5 ..  c6
+c6 ..  c7
+c7 ..  c8
+c8 ..  c9
+c9 ..  c10
+c10 .. c11
+c11 .. c12
+c12 .. c13
+c13 .. c14
+c14 .. c15
+
+
+p1 ..  p2
+p2 ..  p3
+p3 ..  p4
+p4 ..  p5
+p5 ..  p6
+p6 ..  p7
+p7 ..  p8
+p8 ..  p9
+p9 ..  p10
+p10 .. p11
+p11 .. p12
+p12 .. p13
+p13 .. p14
+p14 .. p15
+
+
+
+
+
+d3 --> t4
+
+t4 --> c5
+
+c5 --> p6
+
+d5 --> t6
+
+d7 --> t8
+
+t8 --> c9
+
+d10 --> t11
+
+t11 --> c12
+
+c12 --> p13
+
+
+@enduml

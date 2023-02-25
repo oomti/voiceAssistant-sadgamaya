@@ -14,6 +14,17 @@ C2 Level overview
 
 ## Detailed description of the tools and technologies used
 ---
+
+Initial goal of the project is to integrate DialogFlow and ChatGPT, using NodeJS containers on Kubernetes as middleware.
+
+A desirable feature is to save user conversations in database and recall them when the user logs back
+
+NodeJS
+Yarn
+## Branching strategy
+
+
+
 ## Steps for setting up the development environment and configuring Google Cloud Platform services
 ---
 ## Best practices for code development, testing, and deployment
