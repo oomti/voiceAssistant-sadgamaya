@@ -5,7 +5,7 @@
 
 ## Context and problem statement
 ---
-Communication is an immportant aspect of any project, defining standards of communication early helps in reducing wasted efforts and ensures the system will remain well documented as development progresses.
+Communication is an important aspect of any project, defining standards of communication early helps in reducing wasted efforts and ensures the system will remain well documented as development progresses.
 
 
 

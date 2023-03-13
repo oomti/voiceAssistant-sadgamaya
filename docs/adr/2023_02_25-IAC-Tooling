@@ -21,11 +21,14 @@ Need an automation solution that performs IAC while enables checking external co
  3. Ansible
  4. Pulumi
  5. Jenkins
+ 6. GitHub actions
+ 7. Cloud Functions
 
 ---
 ## Decision
 ---
-Pulumi meets all requirements
+Changed from Pulumi to terraform - this is already built in provided with GCP.
+Changing infrastructure will happen with Cloud Function
 
 ## Expected consequences
-The infrastructure will be managed with Pulumi, language to manage Infrastructure will be YAML/Javascript or Python.
+This is not exactly best practice
